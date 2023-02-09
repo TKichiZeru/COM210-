@@ -25,18 +25,14 @@ public class COM210 {
                 System.out.println("Enter " + AmtList[k] + " Item.");
                 items = myObj.nextLine();
                 myObjs.add(items);
-                
-                
+        
                 
                 //Find TotalPrice
             for (int j = 0; j < 1; j++){
                 System.out.println("Enter Price:");
                 price = myPrices.nextDouble();
                 myPricess.add(price);
-                
-                
-                
-                
+          
             }
             }     
         }    
@@ -47,9 +43,7 @@ public class COM210 {
             
         }
         
-        
-        
-        
+       
         for(int m = 0; m < 3; m++){
             
             if(myObjs.get(m).equalsIgnoreCase(mystr1)){
