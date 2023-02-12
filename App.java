@@ -1,3 +1,9 @@
+/*
+Write a Java program to accept the names of three items 
+along with their prices from the user and output them and 
+the average price to a user. 
+ */
+
 import java.util.Scanner;  // Import the Scanner class
 import java.util.ArrayList; // import the ArrayList class
 
