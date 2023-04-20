@@ -1,0 +1,68 @@
+import java.util.Random;
+import java.util.Arrays;
+
+public class Lab3 {
+    private int maxSize; //size of stack array
+    private char[] stackArray; //our array
+    private int top; //top of stack
+
+    public static void main(String[] args) {
+        Lab3 lab = new Lab3(5); // create an instance of Lab3 with max size of 10
+
+        // Test isEmpty() and isFull() methods
+        System.out.println("Is stack empty? " + lab.isEmpty());
+        System.out.println("Is stack full? " + lab.isFull());
+    }
+    
+    public Lab3(int s) {
+        String tragic = "((a)";
+        maxSize = s; // Assign s to maxSize
+        stackArray = new char[maxSize]; //create array
+        top = -1;
+
+        System.out.println("Stack array is: " + Arrays.toString(stackArray));
+
+        for(int i = 0; i < tragic.length(); i++) {
+            char goCrazy = tragic.charAt(i);
+            System.out.println("Testing " + goCrazy);
+            if (goCrazy == '(') {
+
+                System.out.println("Testing inside num " + i);
+                push(goCrazy);
+            } else if (goCrazy == ')') {
+                System.out.println("Testing inside num " + i);
+                pop();
+
+            } else {
+
+                //System.out.println("else statement Testing inside num " + i);
+            }
+
+            System.out.println("Testing num " + i);
+
+        }
+
+        //testers
+        System.out.println("Testing...");
+        System.out.println(tragic);
+        System.out.println("Stack array is: " + Arrays.toString(stackArray));
+
+    }
+
+    /* ----- */
+    public void push(char i) {
+        stackArray[++top] = i; //increment top- put item in
+    }
+    /* ----- */
+    public char pop() {
+        return stackArray[top--]; //access item , dec top
+    }
+    /* ----- */
+    public boolean isEmpty() { //true if stack is empty
+        return (top == -1);
+    }
+    /* ----- */
+    public boolean isFull() { //true if stack is full
+        return (top == maxSize-1);
+    }
+}
