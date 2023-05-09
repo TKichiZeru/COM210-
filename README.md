@@ -1,4 +1,4 @@
 # COM210-
-First Lab Assignment
+Lab Assignments
 
 **This is Bold**
